@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Érika - Bolo & Salgados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fff8f2;
+            color: #333;
+        }
+        header {
+            background: #ff6f61;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background: #ff9f80;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+        h2 {
+            color: #ff6f61;
+            border-bottom: 2px solid #ff9f80;
+            padding-bottom: 5px;
+        }
+        .cardapio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+        .item img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        footer {
+            background: #ff6f61;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Érika - Bolo & Salgados</h1>
+        <p>Delícias feitas com amor para todas as ocasiões</p>
+    </header>
+
+    <nav>
+        <a href="#bolos">Bolos</a>
+        <a href="#salgados">Salgados</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="container">
+        <section id="bolos">
+            <h2> Nossos Bolos</h2>
+            <div class="cardapio">
+                <div class="item">
+                    <img src="https://source.unsplash.com/300x200/?cake,chocolate" alt="Bolo de Chocolate">
+                    <h3>Bolo de Chocolate</h3>
+                    <p>Clássico e irresistível, fofinho e recheado.</p>
+                </div>
+                <div class="item">
+                    <img src="https://source.unsplash.com/300x200/?cake,strawberry" alt="Bolo de Morango">
+                    <h3>Bolo de Morango</h3>
+                    <p>Com cobertura fresca de morango e chantilly.</p>
+                </div>
+                <div class="item">
+                    <img src="https://source.unsplash.com/300x200/?cake,carrot" alt="Bolo de Cenoura">
+                    <h3>Bolo de Cenoura</h3>
+                    <p>Com cobertura de chocolate caseira deliciosa.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="salgados">
+            <h2> Nossos Salgados</h2>
+            <div class="cardapio">
+                <div class="item">
+                    <img src="https://source.unsplash.com/300x200/?snack,coxinha" alt="Coxinha">
+                    <h3>Coxinha</h3>
+                    <p>Tradicional, crocante e recheada com frango temperado.</p>
+                </div>
+                <div class="item">
+                    <img src="https://source.unsplash.com/300x200/?snack,esfiha" alt="Esfiha">
+                    <h3>Esfiha</h3>
+                    <p>Aberta ou fechada, com vários recheios à sua escolha.</p>
+                </div>
+                <div class="item">
+                    <img src="https://source.unsplash.com/300x200/?snack,empada" alt="Empada">
+                    <h3>Empada</h3>
+                    <p>Casquinha crocante com recheio cremoso.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2> Contato</h2>
+            <p> Endereço: Rua: Lúcia, 43 - Barueri</p>
+            <p> WhatsApp: (11) 95376-3736</p>
+            <p> Email: Duarte.erikalopes@outlook.com</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Érika - Bolo & Salgados | Todos os direitos reservados</p>
+    </footer>
+
+</body>
+</html>
