@@ -1,135 +1,194 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Érika - Bolos</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #fff8f2;
-            color: #333;
-        }
-        header {
-            background: #ff6f61;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        header h1 {
-            margin: 0;
-        }
-        nav {
-            background: #ff9f80;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px;
-        }
-        h2 {
-            color: #ff6f61;
-            border-bottom: 2px solid #ff9f80;
-            padding-bottom: 5px;
-        }
-        .cardapio {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .item {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-            text-align: center;
-        }
-        .item img {
-            max-width: 100%;
-            border-radius: 8px;
-        }
-        footer {
-            background: #ff6f61;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-        }
-        a.link {
-            color: #ff6f61;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        a.link:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Érika - Bolos</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(180deg, #fff8f2 0%, #ffe3d8 100%);
+      color: #333;
+    }
+
+    header {
+      background: #ff6f61;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      background: #ff9f80;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff8f2;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: #ff6f61;
+      border-left: 5px solid #ff9f80;
+      padding-left: 10px;
+      margin-bottom: 20px;
+      font-size: 1.8em;
+    }
+
+    .cardapio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .item {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .item h3 {
+      margin: 15px 0 5px;
+      color: #ff6f61;
+    }
+
+    .item p {
+      padding: 0 15px 20px;
+      color: #666;
+    }
+
+    footer {
+      background: #ff6f61;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    a.link {
+      color: #ff6f61;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a.link:hover {
+      text-decoration: underline;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      background: #25D366;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      background: #1ebe5d;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>Érika - Bolos</h1>
-        <p>Delícias feitas com amor para todas as ocasiões</p>
-    </header>
+  <header>
+    <h1>Érika - Bolos</h1>
+    <p>Delícias feitas com amor para todas as ocasiões 🍓</p>
+  </header>
 
-    <nav>
-        <a href="#bolos">Bolos</a>
-        <a href="#contato">Contato</a>
-    </nav>
+  <nav>
+    <a href="#bolos">Bolos</a>
+    <a href="#contato">Contato</a>
+  </nav>
 
-    <div class="container">
-        <section id="bolos">
-            <h2>🍰 Nossos Bolos</h2>
-            <div class="cardapio">
-                <div class="item">
-                    <img src="https://images.unsplash.com/photo-1606312619200-9b8e32c7f50f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bolo de Chocolate">
-                    <h3>Bolo de Chocolate</h3>
-                    <p>Clássico e irresistível, fofinho e recheado.</p>
-                </div>
-                <div class="item">
-                    <img src="https://images.unsplash.com/photo-1607923433552-cac3b3fdcd59?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bolo de Morango">
-                    <h3>Bolo de Morango</h3>
-                    <p>Com cobertura fresca de morango e chantilly.</p>
-                </div>
-                <div class="item">
-                    <img src="https://images.unsplash.com/photo-1605478586368-3f7e907a8f4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bolo de Cenoura">
-                    <h3>Bolo de Cenoura</h3>
-                    <p>Com cobertura de chocolate caseira deliciosa.</p>
-                </div>
-            </div>
-        </section>
+  <div class="container">
+    <section id="bolos">
+      <h2>🍰 Nossos Bolos</h2>
+      <div class="cardapio">
+        <div class="item">
+          <img src="https://source.unsplash.com/600x400/?chocolate-cake" alt="Bolo de Chocolate">
+          <h3>Bolo de Chocolate</h3>
+          <p>Clássico e irresistível, fofinho e recheado.</p>
+        </div>
+        <div class="item">
+          <img src="https://source.unsplash.com/600x400/?strawberry-cake" alt="Bolo de Morango">
+          <h3>Bolo de Morango</h3>
+          <p>Com cobertura fresca de morango e chantilly.</p>
+        </div>
+        <div class="item">
+          <img src="https://source.unsplash.com/600x400/?carrot-cake" alt="Bolo de Cenoura">
+          <h3>Bolo de Cenoura</h3>
+          <p>Com cobertura de chocolate caseira deliciosa.</p>
+        </div>
+      </div>
+    </section>
 
-        <section id="contato">
-            <h2>📞 Contato</h2>
-            <p>📍 Endereço: Rua: Lúcia, 43 - Barueri</p>
-            <p>📱 WhatsApp: <a class="link" href="https://wa.me/5511953763736" target="_blank">(11) 95376-3736</a></p>
-            <p>📧 Email: <a class="link" href="mailto:Duarte.erikalopes@outlook.com">Duarte.erikalopes@outlook.com</a></p>
+    <section id="contato" style="margin-top: 60px;">
+      <h2>📞 Contato</h2>
+      <p>📍 Endereço: Rua Lúcia, 43 - Barueri</p>
+      <p>📱 WhatsApp: <a class="link" href="https://wa.me/5511953763736" target="_blank">(11) 95376-3736</a></p>
+      <p>📧 Email: <a class="link" href="mailto:Duarte.erikalopes@outlook.com">Duarte.erikalopes@outlook.com</a></p>
 
-            <!-- Botão de pedido -->
-            <p style="margin-top:20px; text-align:center;">
-                <a href="https://wa.me/5511953763736?text=Olá%20Érika!%20Gostaria%20de%20fazer%20um%20pedido.%20É%20sobre%20bolos." 
-                   target="_blank" 
-                   style="background:#25D366; color:white; padding:12px 20px; border-radius:8px; font-size:18px; text-decoration:none; font-weight:bold; box-shadow:0 3px 6px rgba(0,0,0,0.2);">
-                    📲 Fazer Pedido pelo WhatsApp
-                </a>
-            </p>
-        </section>
-    </div>
+      <div style="text-align:center; margin-top:30px;">
+        <a class="whatsapp-btn" href="https://wa.me/5511953763736?text=Olá%20Érika!%20Gostaria%20de%20fazer%20um%20pedido.%20É%20sobre%20bolos." target="_blank">
+          📲 Fazer Pedido pelo WhatsApp
+        </a>
+      </div>
+    </section>
+  </div>
 
-    <footer>
-        <p>&copy; 2025 Érika - Bolos | Todos os direitos reservados</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Érika - Bolos | Todos os direitos reservados</p>
+  </footer>
 
 </body>
 </html>
